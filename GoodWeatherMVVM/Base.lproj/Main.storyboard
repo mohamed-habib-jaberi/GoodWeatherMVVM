@@ -82,10 +82,51 @@
                     <view key="view" contentMode="scaleToFill" id="0Gy-92-uZn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IoJ-aM-U23">
+                                <rect key="frame" x="20" y="125" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yUL-KR-4YR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kF-VA-1Is">
+                                <rect key="frame" x="141" y="649" width="157" height="66"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="g5F-vr-J7U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="qHn-8X-ZeW" eventType="touchUpInside" id="VNK-kO-YqP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IoJ-aM-U23" firstAttribute="leading" secondItem="iV1-b8-X8x" secondAttribute="leading" constant="20" id="3GF-L8-U8o"/>
+                            <constraint firstItem="iV1-b8-X8x" firstAttribute="trailing" secondItem="IoJ-aM-U23" secondAttribute="trailing" constant="20" id="Ki0-q5-JGc"/>
+                            <constraint firstItem="IoJ-aM-U23" firstAttribute="top" secondItem="iV1-b8-X8x" secondAttribute="top" constant="69" id="MFH-sb-V6a"/>
+                            <constraint firstItem="3kF-VA-1Is" firstAttribute="leading" secondItem="iV1-b8-X8x" secondAttribute="leading" constant="141" id="SWE-gM-HEm"/>
+                            <constraint firstItem="iV1-b8-X8x" firstAttribute="bottom" secondItem="3kF-VA-1Is" secondAttribute="bottom" constant="93" id="hRs-Ro-mUo"/>
+                            <constraint firstItem="iV1-b8-X8x" firstAttribute="trailing" secondItem="3kF-VA-1Is" secondAttribute="trailing" constant="116" id="x5P-IA-16h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iV1-b8-X8x"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add City" id="26b-ap-SSC"/>
+                    <navigationItem key="navigationItem" title="Add City" id="26b-ap-SSC">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="7oq-9k-Oft">
+                            <connections>
+                                <action selector="close:" destination="qHn-8X-ZeW" id="bF1-E2-JJA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityNameTextField" destination="IoJ-aM-U23" id="6le-sk-djV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJ3-HH-XN6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

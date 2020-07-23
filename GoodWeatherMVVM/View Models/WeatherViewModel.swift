@@ -13,8 +13,12 @@ import Foundation
 struct WeatherViewModel : Decodable {
     
     let name: String
-    let main: TemperatureViewModel
-       
-      
- 
+    var currentTemperature: TemperatureViewModel
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "name"
+        case currentTemperature = "main"
+        
+    }
+    
 }

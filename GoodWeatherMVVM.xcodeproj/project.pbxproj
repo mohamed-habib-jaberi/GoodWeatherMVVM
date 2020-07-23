@@ -18,6 +18,7 @@
 		61F7D62924C9F6B0007206ED /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F7D62824C9F6B0007206ED /* WebServices.swift */; };
 		61F7D62C24CA3031007206ED /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F7D62B24CA3031007206ED /* WeatherViewModel.swift */; };
 		61F7D62E24CA306C007206ED /* WeatherListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F7D62D24CA306C007206ED /* WeatherListViewModel.swift */; };
+		61F7D63024CA3422007206ED /* TemperatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F7D62F24CA3422007206ED /* TemperatureViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		61F7D62824C9F6B0007206ED /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		61F7D62B24CA3031007206ED /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		61F7D62D24CA306C007206ED /* WeatherListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewModel.swift; sourceTree = "<group>"; };
+		61F7D62F24CA3422007206ED /* TemperatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		61F7D62A24CA2F90007206ED /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				61F7D62F24CA3422007206ED /* TemperatureViewModel.swift */,
 				61F7D62B24CA3031007206ED /* WeatherViewModel.swift */,
 				61F7D62D24CA306C007206ED /* WeatherListViewModel.swift */,
 			);
@@ -187,6 +190,7 @@
 			files = (
 				61F7D62124C9D692007206ED /* WeatherListTableViewController.swift in Sources */,
 				61F7D60C24C9C34E007206ED /* AppDelegate.swift in Sources */,
+				61F7D63024CA3422007206ED /* TemperatureViewModel.swift in Sources */,
 				61F7D62924C9F6B0007206ED /* WebServices.swift in Sources */,
 				61F7D62C24CA3031007206ED /* WeatherViewModel.swift in Sources */,
 				61F7D62624C9DB4E007206ED /* WeatherCell.swift in Sources */,

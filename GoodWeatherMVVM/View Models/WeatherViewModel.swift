@@ -13,9 +13,8 @@ import Foundation
 struct WeatherViewModel : Decodable {
     
     let name: String
-    var temperature: Double
-    var temperatureMin: Double
-    var temperatureMax: Double
-   
+    let main: TemperatureViewModel
+       
+      
  
 }

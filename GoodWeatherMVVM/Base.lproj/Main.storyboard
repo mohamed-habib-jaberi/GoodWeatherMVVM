@@ -10,7 +10,7 @@
         <!--Good Weather-->
         <scene sceneID="FnZ-1e-nLj">
             <objects>
-                <tableViewController id="AwC-Hf-Kbt" sceneMemberID="viewController">
+                <tableViewController id="AwC-Hf-Kbt" customClass="WeatherListTableViewController" customModule="GoodWeatherMVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iI9-Nj-YCV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
         <!--Add City-->
         <scene sceneID="poY-86-xZv">
             <objects>
-                <viewController id="qHn-8X-ZeW" sceneMemberID="viewController">
+                <viewController id="qHn-8X-ZeW" customClass="AddWeatherCityViewController" customModule="GoodWeatherMVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Gy-92-uZn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

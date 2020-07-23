@@ -11,7 +11,7 @@ import Foundation
 //MARK:-  Ressources
 // ressources = sth that we're requesting
 // T = type that we're requesting
-struct Ressources<T> {
+struct Ressource<T> {
     
     let url: URL
     let parse: (Data) -> T?
@@ -20,12 +20,12 @@ struct Ressources<T> {
 
 final class WebServices {
     
-    func load<T>(ressource: Ressources<T>, completion: @escaping (T?) -> ()) {
+    func load<T>(ressource: Ressource<T>, completion: @escaping (T?) -> ()) {
         
         URLSession.shared.dataTask(with: ressource.url) { (data, response, error) in
-            
+            print("#########")
             print(data)
-            
+            print("#########")
             if let data = data {
                 DispatchQueue.main.async {
                     completion(ressource.parse(data))

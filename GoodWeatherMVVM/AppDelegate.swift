@@ -51,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let userDefaults = UserDefaults.standard
         if userDefaults.value(forKey: "unit") == nil {
+            //fahrenheit is the default selectes unit
             userDefaults.set(Unit.fahrenheit.rawValue, forKey: "unit")
         }
         

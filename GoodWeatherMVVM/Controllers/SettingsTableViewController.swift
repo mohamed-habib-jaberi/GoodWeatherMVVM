@@ -45,6 +45,7 @@ class SettingsTableViewController: UITableViewController {
         
         if settingsItem == self.settingsViewModel.selectedUnit {
             cell.accessoryType = .checkmark
+            
         }
         
         return cell
@@ -52,9 +53,17 @@ class SettingsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        // uncheck all cells
+        tableView.visibleCells.forEach { (cell) in
+            cell.accessoryType = .none
+        }
        
         if let cell = self.tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .checkmark
+            
+            // Persisting Unit in User Defaults
+            let unit = Unit.allCases[indexPath.row]
+            self.settingsViewModel.selectedUnit = unit
         }
     }
     

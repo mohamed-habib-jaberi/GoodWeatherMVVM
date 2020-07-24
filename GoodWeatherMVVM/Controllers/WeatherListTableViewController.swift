@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class WeatherListTableViewController: UITableViewController, AddWeatherDelegate{
+class WeatherListTableViewController: UITableViewController{
     
     
     private var weatherListViewModel = WeatherListViewModel()
@@ -21,14 +21,7 @@ class WeatherListTableViewController: UITableViewController, AddWeatherDelegate{
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-    // MARK: - AddWeatherDelegate
-    func addWeatherDidSave(vm: WeatherViewModel) {
-        print("*********")
-        print(vm.name)
-        print("*********")
-        self.weatherListViewModel.addWeatherViewModel(vm)
-        self.tableView.reloadData()
-    }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -50,8 +43,9 @@ class WeatherListTableViewController: UITableViewController, AddWeatherDelegate{
         
         guard let settingsTableVC = nav.viewControllers.first as? SettingsTableViewController  else {   fatalError("SettingsTableViewController  not found")
         }
-        
+        settingsTableVC.delegate = self
     }
+    
     private func prepareSegueForAddWeatherCityViewController(segue: UIStoryboardSegue){
         
         guard let nav = segue.destination as? UINavigationController else {
@@ -79,5 +73,27 @@ class WeatherListTableViewController: UITableViewController, AddWeatherDelegate{
         let weatherVM = self.weatherListViewModel.modelAt(indexPath.row)
         cell.setupCell(vm: weatherVM)
         return cell
+    }
+}
+
+// MARK: - SettingsDelegate
+extension WeatherListTableViewController : SettingsDelegate {
+    
+    func settingsDone(_ vm: SettingsViewModel) {
+        print("settings done ")
+        
+    }
+}
+
+// MARK: - AddWeatherDelegate
+extension WeatherListTableViewController : AddWeatherDelegate{
+    
+    func addWeatherDidSave(vm: WeatherViewModel) {
+        print("*********")
+        print(vm.name)
+        print("*********")
+        self.weatherListViewModel.addWeatherViewModel(vm)
+        self.tableView.reloadData()
+        
     }
 }

@@ -9,9 +9,22 @@
 import Foundation
 import UIKit
 
-    // MARK: - WeatherListViewModel
+// MARK: - WeatherListViewModel
 struct WeatherListViewModel {
     
     private var weatherViewModels = [WeatherViewModel]()
     
+    mutating func addWeatherViewModel(_ vm: WeatherViewModel) {
+        
+        self.weatherViewModels.append(vm)
+    }
+    
+    func numbersOfRows(_ section: Int) -> Int {
+        return self.weatherViewModels.count
+    }
+    
+    func modelAt(_ index: Int) -> (WeatherViewModel) {
+        
+        return self.weatherViewModels[index]
+    }
 }

@@ -10,7 +10,7 @@
         <!--Settings-->
         <scene sceneID="TFT-39-rC1">
             <objects>
-                <tableViewController id="zUd-k2-jr6" sceneMemberID="viewController">
+                <tableViewController id="zUd-k2-jr6" customClass="SettingsTableViewController" customModule="GoodWeatherMVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2cW-W5-l0N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,9 @@
                             <outlet property="delegate" destination="zUd-k2-jr6" id="oyD-ke-lJi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="lb3-kk-gd2"/>
+                    <navigationItem key="navigationItem" title="Settings" id="lb3-kk-gd2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7Tz-wl-y6Y"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2V-RB-mXl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,12 +96,12 @@
                     <navigationItem key="navigationItem" title="Good Weather" id="ucB-MM-8Pe">
                         <barButtonItem key="leftBarButtonItem" title="Settings" image="gear" id="geN-Pn-tmp">
                             <connections>
-                                <segue destination="SoR-MO-lsd" kind="presentation" id="YmG-v5-LbY"/>
+                                <segue destination="SoR-MO-lsd" kind="presentation" identifier="SettingsTableViewController" id="YmG-v5-LbY"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="utX-5n-An4">
                             <connections>
-                                <segue destination="Iuv-Z4-A8z" kind="presentation" id="UKF-L5-LDr"/>
+                                <segue destination="Iuv-Z4-A8z" kind="presentation" identifier="AddWeatherCityViewController" id="UKF-L5-LDr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -199,7 +201,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwf-03-ubP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1669.5652173913045" y="-12.053571428571429"/>
+            <point key="canvasLocation" x="1816" y="-12"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rHr-yz-siP">

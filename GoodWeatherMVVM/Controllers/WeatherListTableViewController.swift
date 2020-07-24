@@ -12,7 +12,7 @@ import UIKit
 class WeatherListTableViewController: UITableViewController, AddWeatherDelegate{
     
     
-   private var weatherListViewModel = WeatherListViewModel()
+    private var weatherListViewModel = WeatherListViewModel()
     
     
     override func viewDidLoad() {
@@ -31,6 +31,29 @@ class WeatherListTableViewController: UITableViewController, AddWeatherDelegate{
     }
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "AddWeatherCityViewController" {
+            
+            self.prepareSegueForAddWeatherCityViewController(segue: segue)
+            
+        }else if segue.identifier == "SettingsTableViewController" {
+            
+            self.prepareSegueForSettingsTableViewController(segue: segue)
+        }
+        
+    }
+    private func prepareSegueForSettingsTableViewController(segue: UIStoryboardSegue){
+        
+        guard let nav = segue.destination as? UINavigationController else {
+            fatalError("Navigation controller not found")
+        }
+        
+        guard let settingsTableVC = nav.viewControllers.first as? SettingsTableViewController  else {   fatalError("SettingsTableViewController  not found")
+        }
+        
+    }
+    private func prepareSegueForAddWeatherCityViewController(segue: UIStoryboardSegue){
+        
         guard let nav = segue.destination as? UINavigationController else {
             fatalError("Navigation controller not found")
         }

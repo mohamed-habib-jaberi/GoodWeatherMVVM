@@ -9,29 +9,44 @@
 import Foundation
 import UIKit
 
+
+protocol AddWeatherDelegate {
+    func addWeatherDidSave(vm: WeatherViewModel)
+}
+
 class AddWeatherCityViewController: UIViewController {
+    
     
     @IBOutlet weak var cityNameTextField: UITextField!
     
+    var delegate: AddWeatherDelegate?
+    
+    
     @IBAction func close(_ sender: Any) {
-         self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
-   @IBAction func save(_ sender: Any) {
-       
-    if let city = self.cityNameTextField.text {
-             let weatherURL = URL(string: "https://openweathermap.org/data/2.5/weather?q=\(city)&appid=439d4b804bc8187953eb36d2a8c26a02&units=imperial")!
+    @IBAction func save(_ sender: Any) {
         
-        let weatherRessource = Ressource<WeatherViewModel>(url: weatherURL) { data in
+        if let city = self.cityNameTextField.text {
+            let weatherURL = URL(string: "https://openweathermap.org/data/2.5/weather?q=\(city)&appid=439d4b804bc8187953eb36d2a8c26a02&units=imperial")!
             
-            let weatherVM = try? JSONDecoder().decode(WeatherViewModel.self, from: data)
+            let weatherRessource = Ressource<WeatherViewModel>(url: weatherURL) { data in
+                
+                let weatherVM = try? JSONDecoder().decode(WeatherViewModel.self, from: data)
+                
+                return weatherVM
+            }
             
-            return weatherVM
-        }
-        
-        WebServices().load(ressource: weatherRessource) { result in
-            
+            WebServices().load(ressource: weatherRessource) { [weak self] result in
+                
+                if let weatherVM = result {
+                    if let delegate = self?.delegate {
+                        self?.delegate?.addWeatherDidSave(vm: weatherVM)
+                        self?.dismiss(animated: true, completion: nil)
+                    }
+                }
+            }
         }
     }
-   }
 }

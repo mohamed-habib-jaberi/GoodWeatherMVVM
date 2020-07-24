@@ -81,7 +81,8 @@ extension WeatherListTableViewController : SettingsDelegate {
     
     func settingsDone(_ vm: SettingsViewModel) {
         print("settings done ")
-        
+        self.weatherListViewModel.updateUnit(to: vm.selectedUnit)
+        self.tableView.reloadData()
     }
 }
 

@@ -17,14 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let coloredAppearance = UINavigationBarAppearance()
-              coloredAppearance.configureWithOpaqueBackground()
-              coloredAppearance.backgroundColor = UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1.0)
-             coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-             coloredAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-          
-              UINavigationBar.appearance().standardAppearance = coloredAppearance
-              UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
-              UINavigationBar.appearance().tintColor = UIColor.white
+        coloredAppearance.configureWithOpaqueBackground()
+        coloredAppearance.backgroundColor = UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1.0)
+        coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        coloredAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        UINavigationBar.appearance().standardAppearance = coloredAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
+        UINavigationBar.appearance().tintColor = UIColor.white
+        
+        setupDefaultSettings()
         
         return true
     }
@@ -42,7 +44,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
+    
+    // MARK: Store Settings in userDefault
+    
+    private func setupDefaultSettings(){
+        
+        let userDefaults = UserDefaults.standard
+        if userDefaults.value(forKey: "unit") == nil {
+            userDefaults.set(Unit.fahrenheit.rawValue, forKey: "unit")
+        }
+        
+    }
+    
 }
 

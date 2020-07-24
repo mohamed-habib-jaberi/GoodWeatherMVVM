@@ -43,6 +43,10 @@ class SettingsTableViewController: UITableViewController {
         
         cell.textLabel?.text = settingsItem.displayName
         
+        if settingsItem == self.settingsViewModel.selectedUnit {
+            cell.accessoryType = .checkmark
+        }
+        
         return cell
     }
     

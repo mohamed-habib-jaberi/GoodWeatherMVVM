@@ -35,5 +35,5 @@ extension Unit {
 
 struct SettingsViewModel {
     
-    let unit = Unit.allCases
+    let units = Unit.allCases
 }

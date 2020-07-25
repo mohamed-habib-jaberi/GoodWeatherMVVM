@@ -24,6 +24,7 @@
 		61F7D63724CB6A21007206ED /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F7D63624CB6A21007206ED /* SettingsViewModel.swift */; };
 		61F7D63924CB9895007206ED /* AddCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F7D63824CB9895007206ED /* AddCityViewModel.swift */; };
 		61F7D63C24CB997A007206ED /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F7D63B24CB997A007206ED /* BindingTextField.swift */; };
+		61F7D63E24CCAEB9007206ED /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F7D63D24CCAEB9007206ED /* WeatherDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		61F7D63624CB6A21007206ED /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		61F7D63824CB9895007206ED /* AddCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewModel.swift; sourceTree = "<group>"; };
 		61F7D63B24CB997A007206ED /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
+		61F7D63D24CCAEB9007206ED /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				61F7D62024C9D692007206ED /* WeatherListTableViewController.swift */,
 				61F7D62224C9D6EE007206ED /* AddWeatherCityViewController.swift */,
 				61F7D63424CB671B007206ED /* SettingsTableViewController.swift */,
+				61F7D63D24CCAEB9007206ED /* WeatherDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				61F7D62624C9DB4E007206ED /* WeatherCell.swift in Sources */,
 				61F7D62E24CA306C007206ED /* WeatherListViewModel.swift in Sources */,
 				61F7D62324C9D6EE007206ED /* AddWeatherCityViewController.swift in Sources */,
+				61F7D63E24CCAEB9007206ED /* WeatherDetailsViewController.swift in Sources */,
 				61F7D63324CB204A007206ED /* Double+Extensions.swift in Sources */,
 				61F7D60E24C9C34E007206ED /* SceneDelegate.swift in Sources */,
 				61F7D63724CB6A21007206ED /* SettingsViewModel.swift in Sources */,

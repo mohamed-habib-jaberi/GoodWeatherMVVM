@@ -32,6 +32,8 @@ class WeatherListTableViewController: UITableViewController{
         }else if segue.identifier == "SettingsTableViewController" {
             
             self.prepareSegueForSettingsTableViewController(segue: segue)
+        }else if segue.identifier == "WeatherDetailsViewController"{
+            prepareSegueForWeatherDetailsViewController(segue: segue)
         }
         
     }
@@ -55,6 +57,17 @@ class WeatherListTableViewController: UITableViewController{
         }
         addWeatherCityVC.delegate = self
     }
+    
+    private func prepareSegueForWeatherDetailsViewController(segue: UIStoryboardSegue){
+           
+           guard let weatherDetailsVC = segue.destination as? WeatherDetailsViewController,
+               let indexPath = self.tableView.indexPathForSelectedRow
+           else { return}
+           
+           let weatherVM = self.weatherListViewModel.modelAt(indexPath.row)
+           weatherDetailsVC.weatherViewModel = weatherVM
+           
+       }
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100

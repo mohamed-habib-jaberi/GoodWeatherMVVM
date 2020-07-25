@@ -89,6 +89,7 @@
                                 <connections>
                                     <outlet property="cityNameLabel" destination="wG5-KI-l2f" id="ceB-uC-dtW"/>
                                     <outlet property="temperatureLabel" destination="UHK-Jg-sbM" id="OvQ-Zp-IjE"/>
+                                    <segue destination="7NZ-ud-UdS" kind="show" identifier="WeatherDetailsViewController" id="uqQ-Oj-y3c"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -113,6 +114,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysP-a1-uYO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="959.4202898550725" y="-12.053571428571429"/>
+        </scene>
+        <!--Weather Details View Controller-->
+        <scene sceneID="2wK-dg-XGu">
+            <objects>
+                <viewController id="7NZ-ud-UdS" customClass="WeatherDetailsViewController" customModule="GoodWeatherMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JTX-Kk-oaA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6C-id-RO3">
+                                <rect key="frame" x="122" y="136" width="170" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="Bhh-50-ZAv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txv-HM-mrJ">
+                                <rect key="frame" x="122" y="214" width="170" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="aTa-3O-Hez"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVY-jN-bhJ">
+                                <rect key="frame" x="132" y="297" width="170" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="JD5-jR-V5T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfe-QL-WJZ">
+                                <rect key="frame" x="113.5" y="378" width="187" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="Oxt-3Y-cJ1"/>
+                                    <constraint firstAttribute="width" constant="187" id="YvL-F4-2rJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="z6C-id-RO3" firstAttribute="leading" secondItem="txv-HM-mrJ" secondAttribute="leading" id="2LI-He-Hcc"/>
+                            <constraint firstItem="MQy-vV-m6D" firstAttribute="trailing" secondItem="ZVY-jN-bhJ" secondAttribute="trailing" constant="112" id="2yu-xl-rdC"/>
+                            <constraint firstItem="txv-HM-mrJ" firstAttribute="top" secondItem="z6C-id-RO3" secondAttribute="bottom" constant="16" id="4ji-KI-rxa"/>
+                            <constraint firstItem="bfe-QL-WJZ" firstAttribute="centerX" secondItem="JTX-Kk-oaA" secondAttribute="centerX" id="AbO-Yo-swg"/>
+                            <constraint firstItem="bfe-QL-WJZ" firstAttribute="top" secondItem="ZVY-jN-bhJ" secondAttribute="bottom" constant="19" id="BYG-8b-dpx"/>
+                            <constraint firstItem="z6C-id-RO3" firstAttribute="leading" secondItem="MQy-vV-m6D" secondAttribute="leading" constant="122" id="M4d-Tf-YJT"/>
+                            <constraint firstItem="z6C-id-RO3" firstAttribute="centerX" secondItem="JTX-Kk-oaA" secondAttribute="centerX" id="N87-hF-KSj"/>
+                            <constraint firstItem="z6C-id-RO3" firstAttribute="trailing" secondItem="txv-HM-mrJ" secondAttribute="trailing" id="UIV-wN-9QC"/>
+                            <constraint firstItem="ZVY-jN-bhJ" firstAttribute="leading" secondItem="MQy-vV-m6D" secondAttribute="leading" constant="132" id="UUa-SD-nwS"/>
+                            <constraint firstItem="z6C-id-RO3" firstAttribute="top" secondItem="MQy-vV-m6D" secondAttribute="top" constant="48" id="aPm-Jt-SAP"/>
+                            <constraint firstItem="ZVY-jN-bhJ" firstAttribute="top" secondItem="txv-HM-mrJ" secondAttribute="bottom" constant="21" id="tow-Hq-Qj7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MQy-vV-m6D"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N2B-Vq-OXS"/>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="z6C-id-RO3" id="Y0i-Bd-gOa"/>
+                        <outlet property="currentTemperatureLabel" destination="txv-HM-mrJ" id="HNV-vh-RKh"/>
+                        <outlet property="maxTempLabel" destination="ZVY-jN-bhJ" id="YbH-Um-7wA"/>
+                        <outlet property="minTempLabel" destination="bfe-QL-WJZ" id="ufh-4K-lBp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ohq-g1-9Vt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="904.6875"/>
         </scene>
         <!--Add City-->
         <scene sceneID="poY-86-xZv">

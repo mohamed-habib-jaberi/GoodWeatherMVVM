@@ -23,4 +23,11 @@ struct TemperatureViewModel : Decodable {
         case temperatureMax = "temp_max"
     }
     
+    init(from decoder:Decoder) throws {
+           
+           let container = try decoder.container(keyedBy: CodingKeys.self)
+           temperature = Dynamic(try container.decode(Double.self, forKey: .temperature))
+           temperatureMin = Dynamic(try container.decode(Double.self, forKey: .temperatureMin))
+           temperatureMax = Dynamic(try container.decode(Double.self, forKey: .temperatureMax))
+       }
 }

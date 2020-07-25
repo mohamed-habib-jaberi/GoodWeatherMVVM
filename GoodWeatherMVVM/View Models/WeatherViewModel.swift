@@ -21,6 +21,13 @@ struct WeatherViewModel : Decodable {
         
     }
     
+    init(from decoder:Decoder) throws {
+        
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        name = Dynamic(try container.decode(String.self, forKey: .name))
+        currentTemperature = try container.decode(TemperatureViewModel.self, forKey: .currentTemperature)
+        
+    }
 }
 
 //type eraser
@@ -45,12 +52,12 @@ class Dynamic<T>: Decodable where T: Decodable {
         self.value = value
     }
     
-    enum codingKeys: CodingKey {
+    enum CodingKeys: CodingKey {
         case value
     }
     
     required init(from decoder:Decoder) throws {
-        let values = try decoder.container(keyedBy: codingKeys.self)
+        let values = try decoder.container(keyedBy: CodingKeys.self)
        value = try values.decode(T.self, forKey: .value)
     }
    

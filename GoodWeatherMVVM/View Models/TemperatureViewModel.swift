@@ -12,9 +12,9 @@ import UIKit
 // MARK: - TemperatureViewModel
 struct TemperatureViewModel : Decodable {
     
-    var temperature: Double
-    let temperatureMin: Double
-    let temperatureMax: Double
+    var temperature: Dynamic<Double>
+    let temperatureMin: Dynamic<Double>
+    let temperatureMax: Dynamic<Double>
     
     
     enum CodingKeys: String, CodingKey {

@@ -24,10 +24,10 @@ class WeatherDetailsViewController: UIViewController {
         // solution normal: not binding ViewModel to View
         if let weather = self.weatherViewModel {
     
-            self.cityNameLabel.text = weather.name
-            self.currentTemperatureLabel.text = weather.currentTemperature.temperature.formatAsDegree
-            self.maxTempLabel.text =  "\(weather.currentTemperature.temperatureMax.formatAsDegree)"
-            self.minTempLabel.text =  "\(weather.currentTemperature.temperatureMin.formatAsDegree)"
+            self.cityNameLabel.text = weather.name.value
+            self.currentTemperatureLabel.text = weather.currentTemperature.temperature.value.formatAsDegree
+            self.maxTempLabel.text =  "\(weather.currentTemperature.temperatureMax.value.formatAsDegree)"
+            self.minTempLabel.text =  "\(weather.currentTemperature.temperatureMin.value.formatAsDegree)"
         }
     }
 }

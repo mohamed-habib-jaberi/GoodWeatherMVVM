@@ -12,7 +12,7 @@ import UIKit
 // MARK: - WeatherListViewModel
 struct WeatherListViewModel {
     
-    private var weatherViewModels = [WeatherViewModel]()
+    private(set) var weatherViewModels = [WeatherViewModel]()
     
     mutating func addWeatherViewModel(_ vm: WeatherViewModel) {
         

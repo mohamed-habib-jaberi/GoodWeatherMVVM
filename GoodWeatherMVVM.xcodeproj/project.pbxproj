@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		61CC03BD24CD8A44003C22BA /* WeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CC03BC24CD8A44003C22BA /* WeatherDataSource.swift */; };
+		61CC03BF24CE06BE003C22BA /* TableViewDataSouce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CC03BE24CE06BE003C22BA /* TableViewDataSouce.swift */; };
 		61F7D60C24C9C34E007206ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F7D60B24C9C34E007206ED /* AppDelegate.swift */; };
 		61F7D60E24C9C34E007206ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F7D60D24C9C34E007206ED /* SceneDelegate.swift */; };
 		61F7D61324C9C34E007206ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61F7D61124C9C34E007206ED /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		61CC03BC24CD8A44003C22BA /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
+		61CC03BE24CE06BE003C22BA /* TableViewDataSouce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSouce.swift; sourceTree = "<group>"; };
 		61F7D60824C9C34E007206ED /* GoodWeatherMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodWeatherMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F7D60B24C9C34E007206ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61F7D60D24C9C34E007206ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				61CC03BC24CD8A44003C22BA /* WeatherDataSource.swift */,
+				61CC03BE24CE06BE003C22BA /* TableViewDataSouce.swift */,
 			);
 			path = "Data Source";
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				61F7D62E24CA306C007206ED /* WeatherListViewModel.swift in Sources */,
 				61F7D62324C9D6EE007206ED /* AddWeatherCityViewController.swift in Sources */,
 				61F7D63324CB204A007206ED /* Double+Extensions.swift in Sources */,
+				61CC03BF24CE06BE003C22BA /* TableViewDataSouce.swift in Sources */,
 				61F7D60E24C9C34E007206ED /* SceneDelegate.swift in Sources */,
 				61F7D63724CB6A21007206ED /* SettingsViewModel.swift in Sources */,
 			);

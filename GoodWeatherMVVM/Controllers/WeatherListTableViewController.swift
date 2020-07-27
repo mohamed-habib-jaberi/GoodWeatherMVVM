@@ -13,12 +13,17 @@ class WeatherListTableViewController: UITableViewController{
     
     
     private var weatherListViewModel = WeatherListViewModel()
-    private var dataSource: WeatherDataSource?
+    private var dataSource: TableViewDataSouce<WeatherCell, WeatherViewModel>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.dataSource = WeatherDataSource(weatherListViewModel: self.weatherListViewModel)
+        self.dataSource = TableViewDataSouce(cellIdentifier: "WeatherCell", items: self.weatherListViewModel.weatherViewModels, configureCell: { (cell, vm) in
+            
+            cell.cityNameLabel.text = vm.name
+            cell.temperatureLabel.text = "\(vm.currentTemperature.temperature.formatAsDegree)"
+            
+        })
         self.tableView.dataSource = self.dataSource
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -83,6 +88,7 @@ extension WeatherListTableViewController : AddWeatherDelegate{
         print(vm.name)
         print("*********")
         self.weatherListViewModel.addWeatherViewModel(vm)
+        self.dataSource.updateItems(self.weatherListViewModel.weatherViewModels)
         self.tableView.reloadData()
         
     }

@@ -13,7 +13,7 @@ class TableViewDataSouce<CellType,ViewModel>: NSObject, UITableViewDataSource wh
     
     
     let cellIdentifier: String
-    let items : [ViewModel]
+    var items : [ViewModel]
     let configureCell: (CellType, ViewModel) -> ()
     
     init(cellIdentifier: String, items: [ViewModel], configureCell: @escaping (CellType, ViewModel) -> ()  ) {
@@ -23,7 +23,13 @@ class TableViewDataSouce<CellType,ViewModel>: NSObject, UITableViewDataSource wh
         self.configureCell = configureCell
         
     }
+    //MARK: - Update Items
+    func updateItems(_ items: [ViewModel])  {
+        
+        self.items = items
+    }
     
+     // MARK: - Table view delegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

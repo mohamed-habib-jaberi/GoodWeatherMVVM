@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61CC03C724CF44CA003C22BA /* GoodWeatherMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CC03C624CF44CA003C22BA /* GoodWeatherMVVMTests.swift */; };
 		61F7D60C24C9C34E007206ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F7D60B24C9C34E007206ED /* AppDelegate.swift */; };
 		61F7D60E24C9C34E007206ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F7D60D24C9C34E007206ED /* SceneDelegate.swift */; };
 		61F7D61324C9C34E007206ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61F7D61124C9C34E007206ED /* Main.storyboard */; };
@@ -24,7 +25,20 @@
 		61F7D63724CB6A21007206ED /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F7D63624CB6A21007206ED /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		61CC03C924CF44CA003C22BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61F7D60024C9C34E007206ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61F7D60724C9C34E007206ED;
+			remoteInfo = GoodWeatherMVVM;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		61CC03C424CF44CA003C22BA /* GoodWeatherMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodWeatherMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61CC03C624CF44CA003C22BA /* GoodWeatherMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodWeatherMVVMTests.swift; sourceTree = "<group>"; };
+		61CC03C824CF44CA003C22BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61F7D60824C9C34E007206ED /* GoodWeatherMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodWeatherMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F7D60B24C9C34E007206ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61F7D60D24C9C34E007206ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +59,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		61CC03C124CF44CA003C22BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		61F7D60524C9C34E007206ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,10 +76,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61CC03C524CF44CA003C22BA /* GoodWeatherMVVMTests */ = {
+			isa = PBXGroup;
+			children = (
+				61CC03C624CF44CA003C22BA /* GoodWeatherMVVMTests.swift */,
+				61CC03C824CF44CA003C22BA /* Info.plist */,
+			);
+			path = GoodWeatherMVVMTests;
+			sourceTree = "<group>";
+		};
 		61F7D5FF24C9C34E007206ED = {
 			isa = PBXGroup;
 			children = (
 				61F7D60A24C9C34E007206ED /* GoodWeatherMVVM */,
+				61CC03C524CF44CA003C22BA /* GoodWeatherMVVMTests */,
 				61F7D60924C9C34E007206ED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				61F7D60824C9C34E007206ED /* GoodWeatherMVVM.app */,
+				61CC03C424CF44CA003C22BA /* GoodWeatherMVVMTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +169,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		61CC03C324CF44CA003C22BA /* GoodWeatherMVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61CC03CD24CF44CA003C22BA /* Build configuration list for PBXNativeTarget "GoodWeatherMVVMTests" */;
+			buildPhases = (
+				61CC03C024CF44CA003C22BA /* Sources */,
+				61CC03C124CF44CA003C22BA /* Frameworks */,
+				61CC03C224CF44CA003C22BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61CC03CA24CF44CA003C22BA /* PBXTargetDependency */,
+			);
+			name = GoodWeatherMVVMTests;
+			productName = GoodWeatherMVVMTests;
+			productReference = 61CC03C424CF44CA003C22BA /* GoodWeatherMVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		61F7D60724C9C34E007206ED /* GoodWeatherMVVM */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61F7D61C24C9C350007206ED /* Build configuration list for PBXNativeTarget "GoodWeatherMVVM" */;
@@ -164,6 +214,10 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "mohamed  habib";
 				TargetAttributes = {
+					61CC03C324CF44CA003C22BA = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 61F7D60724C9C34E007206ED;
+					};
 					61F7D60724C9C34E007206ED = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -183,11 +237,19 @@
 			projectRoot = "";
 			targets = (
 				61F7D60724C9C34E007206ED /* GoodWeatherMVVM */,
+				61CC03C324CF44CA003C22BA /* GoodWeatherMVVMTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		61CC03C224CF44CA003C22BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		61F7D60624C9C34E007206ED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,6 +263,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		61CC03C024CF44CA003C22BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61CC03C724CF44CA003C22BA /* GoodWeatherMVVMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		61F7D60424C9C34E007206ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,6 +292,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		61CC03CA24CF44CA003C22BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61F7D60724C9C34E007206ED /* GoodWeatherMVVM */;
+			targetProxy = 61CC03C924CF44CA003C22BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		61F7D61124C9C34E007206ED /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -242,6 +320,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		61CC03CB24CF44CA003C22BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W4M7279BBQ;
+				INFOPLIST_FILE = GoodWeatherMVVMTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jaberi.GoodWeatherMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoodWeatherMVVM.app/GoodWeatherMVVM";
+			};
+			name = Debug;
+		};
+		61CC03CC24CF44CA003C22BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W4M7279BBQ;
+				INFOPLIST_FILE = GoodWeatherMVVMTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jaberi.GoodWeatherMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoodWeatherMVVM.app/GoodWeatherMVVM";
+			};
+			name = Release;
+		};
 		61F7D61A24C9C350007206ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -395,6 +513,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		61CC03CD24CF44CA003C22BA /* Build configuration list for PBXNativeTarget "GoodWeatherMVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61CC03CB24CF44CA003C22BA /* Debug */,
+				61CC03CC24CF44CA003C22BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		61F7D60324C9C34E007206ED /* Build configuration list for PBXProject "GoodWeatherMVVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
